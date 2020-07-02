@@ -24,7 +24,9 @@
     "dev:h5": "npm run build:h5 -- --watch",
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
-    "dev:quickapp": "npm run build:quickapp -- --watch"
+    "dev:quickapp": "npm run build:quickapp -- --watch",
+    "gc": "git-cz",
+    "eslint": "eslint src --ext .tsx,.ts --color --fix"
   },
   "browserslist": [
     "last 3 versions",
@@ -36,31 +38,53 @@
   "dependencies": {
     "@babel/runtime": "^7.10.4",
     "@tarojs/components": "3.0.2",
+    "@tarojs/react": "3.0.2",
     "@tarojs/runtime": "3.0.2",
     "@tarojs/taro": "3.0.2",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "redux": "^4.0.5",
-    "react-redux": "^7.2.0",
+    "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "@tarojs/react": "3.0.2",
-    "react": "^16.13.1"
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^6.1.2",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.15.2",
-    "@types/react": "^16.9.41",
-    "@tarojs/mini-runner": "3.0.2",
     "@babel/core": "^7.10.4",
+    "@tarojs/mini-runner": "3.0.2",
     "@tarojs/webpack-runner": "3.0.2",
+    "@types/react": "^16.9.41",
+    "@types/react-redux": "^7.1.9",
+    "@types/redux-actions": "^2.6.1",
+    "@types/webpack-env": "^1.15.2",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
     "babel-preset-taro": "3.0.2",
-    "eslint-config-taro": "3.0.2",
+    "commitizen": "^4.1.2",
     "eslint": "^7.3.1",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint-config-taro": "3.0.2",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.5",
     "stylelint": "13.6.1",
-    "@typescript-eslint/parser": "^3.5.0",
-    "@typescript-eslint/eslint-plugin": "^3.5.0",
     "typescript": "^3.9.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint  && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx,css,less,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

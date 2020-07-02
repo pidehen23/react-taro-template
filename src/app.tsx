@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 
-import configStore from './store'
-
 import './app.less'
+import configStore from './store'
 
 const store = configStore()
 

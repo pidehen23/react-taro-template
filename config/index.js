@@ -1,3 +1,5 @@
+import { resolve as _resolve } from './utils'
+
 const config = {
   projectName: 'test-taro',
   date: '2020-7-2',
@@ -59,10 +61,17 @@ const config = {
         }
       }
     }
-  }
+  },
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx', '.json'],
+    alias: {
+      '@': _resolve('src'),
+      '@store': _resolve('src/store'),
+    }
+  },
 }
 
-module.exports = function (merge) {
+export default function (merge) {
   if (process.env.NODE_ENV === 'development') {
     return merge({}, config, require('./dev'))
   }
