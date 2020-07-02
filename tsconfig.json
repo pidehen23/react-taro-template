@@ -19,7 +19,7 @@
     "jsxFactory": "React.createElement",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": ["node_modules/@types", "global.d.ts"],
+    "typeRoots": ["node_modules/@types", "./src/types"],
     "paths": {
       "@/*": ["src/*"],
       "@store/*": ["src/store/*"]
