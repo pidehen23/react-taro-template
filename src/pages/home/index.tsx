@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import Taro from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 
+import apis from './apis'
 import styles from './style/index.less'
 import Test from './components/Test'
 import { IWrapHomeState } from '@/store/home/type'
@@ -25,14 +27,32 @@ type PageState = {}
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps & PageState
 
 interface IState {
-  [key: string]: any
+  loading: boolean
 }
 
 
 class Index extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props)
-    this.state = {}
+    this.state = {
+      loading: true
+    }
+  }
+  async componentDidMount() {
+    try {
+      const res = await Taro.request({
+        method: 'GET',
+        url: apis.getUserInfo()
+      })
+      console.log('数据:', res)
+      this.setState({
+        loading: false
+      })
+    } catch (error) {
+      Taro.showToast({
+        title: '载入远程数据错误'
+      })
+    }
   }
 
   componentDidUpdate(prexProps: any) {
@@ -55,6 +75,7 @@ class Index extends Component<IProps, IState> {
         <Button className='btn dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{count}</Text></View>
         <View><Text>Hello, World</Text></View>
+        <Text>{this.state.loading ? '加载中' : '加载完成'}</Text>
         <Test />
       </View>
     )
