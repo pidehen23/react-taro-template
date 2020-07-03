@@ -1406,7 +1406,7 @@
   dependencies:
     loader-utils "^1.2.3"
 
-"@tarojs/taro@3.0.2":
+"@tarojs/taro@3.0.2", "@tarojs/taro@^3.0.2":
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/@tarojs/taro/download/@tarojs/taro-3.0.2.tgz#67ff99a588923675de34dca027cefdfb85743e88"
   integrity sha1-Z/+ZpYiSNnXeNNygJ879+4V0Pog=
@@ -1462,6 +1462,11 @@
   version "0.0.31"
   resolved "https://registry.npm.taobao.org/@types/archy/download/@types/archy-0.0.31.tgz#01650a4641e7e1d11dbd64eda42eec9a2f829c7f"
   integrity sha1-AWUKRkHn4dEdvWTtpC7smi+CnH8=
+
+"@types/classnames@^2.2.10":
+  version "2.2.10"
+  resolved "https://registry.npm.taobao.org/@types/classnames/download/@types/classnames-2.2.10.tgz#cc658ca319b6355399efc1f5b9e818f1a24bf999"
+  integrity sha1-zGWMoxm2NVOZ78H1uegY8aJL+Zk=
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -2921,7 +2926,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
+classnames@^2.2.5, classnames@^2.2.6:
   version "2.2.6"
   resolved "https://registry.npm.taobao.org/classnames/download/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=

@@ -1,7 +1,7 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "test-taro",
-	"description": "first-taro",
+	"projectname": "react-taro-template",
+	"description": "react-taro-template",
 	"appid": "wxcbb21df150efabff",
 	"setting": {
 		"urlCheck": true,

@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { View, Button, Text } from '@tarojs/components'
 import { connect } from 'react-redux'
+import classnames from 'classnames'
 
-import './style/index.less'
+import styles from './style/index.less'
+import Test from './components/Test'
 import { IWrapHomeState } from '@/store/home/type'
 import { setCommon, add, minus, asyncAdd } from '../../store/home/actions'
 
@@ -47,12 +49,13 @@ class Index extends Component<IProps, IState> {
     const { count } = this.props
 
     return (
-      <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
-        <Button className='dec_btn' onClick={this.props.minus}>-</Button>
-        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
+      <View className={classnames(styles.index, { [styles.home]: true })}>
+        <Button className='btn add_btn' onClick={this.props.add}>+</Button>
+        <Button className='btn dec_btn' onClick={this.props.minus}>-</Button>
+        <Button className='btn dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{count}</Text></View>
         <View><Text>Hello, World</Text></View>
+        <Test />
       </View>
     )
   }
