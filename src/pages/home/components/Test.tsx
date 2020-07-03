@@ -1,5 +1,5 @@
 import React from 'react'
-import { eventCenter, getCurrentInstance } from '@tarojs/taro'
+import Taro, { eventCenter, getCurrentInstance } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 
 class Test extends React.Component {

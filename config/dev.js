@@ -5,5 +5,11 @@ module.exports = {
   defineConstants: {
   },
   mini: {},
-  h5: {}
+  h5: {},
+  plugins: [
+    ['@tarojs/plugin-mock', {
+      host: '127.0.0.1',
+      port: 4321
+    }]
+  ]
 }

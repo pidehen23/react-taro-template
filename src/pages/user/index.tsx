@@ -7,12 +7,9 @@ import classnames from 'classnames'
 import styles from './style/index.less'
 import { IWrapHomeState } from '@/store/home/type'
 
-type PageStateProps = {
+type PageStateProps = {}
 
-}
-
-type PageDispatchProps = {
-}
+type PageDispatchProps = {}
 
 type PageOwnProps = {}
 
@@ -45,7 +42,7 @@ class Index extends Component<IProps, IState> {
   }
 
   onNextPage = () => {
-    Taro.navigateTo({ url: '/pages/home/index' })
+    Taro.switchTab({ url: '/pages/home/index' })
   }
 
   render() {
@@ -62,8 +59,7 @@ const mapStateToProps = (state: IWrapHomeState) => ({
   count: state.home.count
 })
 
-const mapDispatchToProps = () => ({
-})
+const mapDispatchToProps = () => ({})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index)
 

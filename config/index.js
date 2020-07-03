@@ -1,4 +1,4 @@
-import { resolve as _resolve } from './utils'
+const path = require('path')
 
 const config = {
   projectName: 'test-taro',
@@ -62,13 +62,13 @@ const config = {
       }
     }
   },
-  resolve: {
-    extensions: ['.js', '.ts', '.tsx', '.json'],
-    alias: {
-      '@': _resolve('src'),
-      '@store': _resolve('src/store'),
-    }
-  },
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/store': path.resolve(__dirname, '..', 'src/store'),
+    '@/library': path.resolve(__dirname, '..', 'src/library'),
+    '@/package': path.resolve(__dirname, '..', 'package.json'),
+    '@/project': path.resolve(__dirname, '..', 'project.config.json'),
+  }
 }
 
 export default function (merge) {
