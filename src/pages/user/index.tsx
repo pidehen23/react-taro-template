@@ -45,10 +45,17 @@ class Index extends Component<IProps, IState> {
     Taro.switchTab({ url: '/pages/home/index' })
   }
 
+  onNextList = () => {
+    Taro.navigateTo({
+      url: '/pages/list/index'
+    })
+  }
+
   render() {
     return (
       <View className={classnames(styles.index, { [styles.user]: true })}>
-        <Button onClick={this.onNextPage}>个人信息</Button>
+        <Button onClick={this.onNextPage}>首页</Button>
+        <Button onClick={this.onNextList}>虚拟列表</Button>
         <Text>{this.state.msg}</Text>
       </View>
     )

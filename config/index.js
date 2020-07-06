@@ -10,10 +10,9 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: `dist`,
   plugins: [],
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
     patterns: [
     ],
@@ -42,6 +41,10 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
+    },
+    // 预渲染
+    prerender: {
+      include: ['pages/home/index'],
     }
   },
   h5: {

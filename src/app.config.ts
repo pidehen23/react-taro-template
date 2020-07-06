@@ -2,6 +2,7 @@ export default {
   pages: [
     'pages/home/index',
     'pages/user/index',
+    "pages/list/index"
   ],
   tabBar: {
     list: [{

@@ -65,6 +65,7 @@ class Index extends Component<IProps, IState> {
   componentDidShow() { }
 
   componentDidHide() { }
+
   asyncAdd = () => {
     this.props.asyncAdd && this.props.asyncAdd()
   }
@@ -78,9 +79,7 @@ class Index extends Component<IProps, IState> {
         <Button className='btn dec_btn' onClick={this.props.minus}>-</Button>
         <Button className='btn dec_btn' onClick={this.asyncAdd}>async</Button>
         <View><Text>{count}</Text></View>
-        <View><Text>Hello, World</Text></View>
         <Text>{this.state.loading ? '加载中' : '加载完成'}</Text>
-        <Test />
       </View>
     )
   }
