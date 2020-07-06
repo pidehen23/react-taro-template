@@ -33,12 +33,20 @@ export const minus = () => (dispatch: (param: any) => Promise<any>, getState: ()
 }
 
 // 异步的action
-export const asyncAdd = () => async (dispatch: (param: any) => Promise<any>) => {
-  const init = await new Promise<number>((resolve) => {
+export const asyncAdd = () => (dispatch: (param: any) => Promise<any>, getState: () => IWrapHomeState) => {
+  new Promise<number>((resolve) => {
     setTimeout(() => {
       resolve(2);
-    }, 2000);
-  })
+    }, 1000);
+  }).then(init => {
+    const home = getState().home
+    const count = clone(home.count)
+    // void dispatch(add(init))
 
-  dispatch(add(init))
+    void dispatch(
+      setCommon({
+        count: count + init
+      })
+    )
+  })
 }

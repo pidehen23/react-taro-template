@@ -1,17 +1,17 @@
 import React from 'react'
-import Taro, { eventCenter, getCurrentInstance } from '@tarojs/taro'
+// import Taro, { eventCenter, getCurrentInstance } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 
 class Test extends React.Component {
   componentDidMount() {
-    eventCenter.once(getCurrentInstance().router.onReady, () => {
-      const query = Taro.createSelectorQuery()
-      query.select('#only').boundingClientRect()
-      query.exec(res => {
-        console.log(res, 'res')
-      })
-      console.log('onReady')
-    })
+    // eventCenter.once(getCurrentInstance().router.onReady, () => {
+    //   const query = Taro.createSelectorQuery()
+    //   query.select('#only').boundingClientRect()
+    //   query.exec(res => {
+    //     console.log(res)
+    //   })
+    //   console.log('onReady')
+    // })
   }
 
   render() {

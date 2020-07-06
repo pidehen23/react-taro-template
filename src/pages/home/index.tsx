@@ -39,12 +39,13 @@ class Index extends Component<IProps, IState> {
     }
   }
   async componentDidMount() {
+    console.log('ENV=', Taro.getEnv())
     try {
       const res = await Taro.request({
         method: 'GET',
         url: apis.getUserInfo()
       })
-      console.log('数据:', res)
+      console.log(res)
       this.setState({
         loading: false
       })
@@ -64,6 +65,9 @@ class Index extends Component<IProps, IState> {
   componentDidShow() { }
 
   componentDidHide() { }
+  asyncAdd = () => {
+    this.props.asyncAdd && this.props.asyncAdd()
+  }
 
   render() {
     const { count } = this.props
@@ -72,7 +76,7 @@ class Index extends Component<IProps, IState> {
       <View className={classnames(styles.index, { [styles.home]: true })}>
         <Button className='btn add_btn' onClick={this.props.add}>+</Button>
         <Button className='btn dec_btn' onClick={this.props.minus}>-</Button>
-        <Button className='btn dec_btn' onClick={this.props.asyncAdd}>async</Button>
+        <Button className='btn dec_btn' onClick={this.asyncAdd}>async</Button>
         <View><Text>{count}</Text></View>
         <View><Text>Hello, World</Text></View>
         <Text>{this.state.loading ? '加载中' : '加载完成'}</Text>
