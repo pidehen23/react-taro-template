@@ -58,7 +58,7 @@
     "@tarojs/plugin-mock": "^0.0.6",
     "@tarojs/webpack-runner": "3.0.2",
     "@types/classnames": "^2.2.10",
-    "@types/react": "^16.9.41",
+    "@types/react": "^16.9.42",
     "@types/react-redux": "^7.1.9",
     "@types/redux-actions": "^2.6.1",
     "@types/webpack-bundle-analyzer": "^3.8.0",
@@ -71,7 +71,7 @@
     "eslint-config-taro": "3.0.2",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.6",
+    "eslint-plugin-react-hooks": "^4.0.7",
     "stylelint": "13.6.1",
     "typescript": "^3.9.6",
     "webpack-bundle-analyzer": "^3.8.0"
