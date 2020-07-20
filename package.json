@@ -72,6 +72,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "lint-staged": "^10.2.11",
     "stylelint": "13.6.1",
     "typescript": "^3.9.7",
     "webpack-bundle-analyzer": "^3.8.0"
@@ -83,13 +84,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run eslint  && lint-staged",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "*.{js,ts,tsx,jsx,css,less,md}": [
       "prettier --write",
+      "eslint",
       "git add"
     ]
   }

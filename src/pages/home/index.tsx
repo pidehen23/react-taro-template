@@ -6,7 +6,6 @@ import classnames from 'classnames'
 
 import apis from './apis'
 import styles from './style/index.less'
-import Test from './components/Test'
 import { IWrapHomeState } from '@/store/home/type'
 import { setCommon, add, minus, asyncAdd } from '@/store/home/actions'
 
