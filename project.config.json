@@ -17,6 +17,7 @@
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -27,7 +28,7 @@
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "useMultiFrameRuntime": true
+    "useApiHook": true
   },
   "compileType": "miniprogram",
   "simulatorType": "wechat",
