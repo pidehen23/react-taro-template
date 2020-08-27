@@ -2290,10 +2290,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@^16.9.47":
-  version "16.9.47"
-  resolved "https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.47.tgz?cache=0&sync_timestamp=1598334155774&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.47.tgz#fb092936f0b56425f874d0ff1b08051fdf70c1ba"
-  integrity sha1-+wkpNvC1ZCX4dND/GwgFH99wwbo=
+"@types/react@^16.9.48":
+  version "16.9.48"
+  resolved "https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.48.tgz?cache=0&sync_timestamp=1598472228956&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.48.tgz#d3387329f070d1b1bc0ff4a54a54ceefd5a8485c"
+  integrity sha1-0zhzKfBw0bG8D/SlSlTO79WoSFw=
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -4575,10 +4575,10 @@ commitizen@^4.0.3:
     strip-bom "4.0.0"
     strip-json-comments "3.0.1"
 
-commitizen@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.npm.taobao.org/commitizen/download/commitizen-4.2.0.tgz#1be53302dd23a028c2a1c39b6d5c857f0e3a8a29"
-  integrity sha1-G+UzAt0joCjCocObbVyFfw46iik=
+commitizen@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.npm.taobao.org/commitizen/download/commitizen-4.2.1.tgz#3b098b16c6b1a37f0d129018dff6751b20cd3103"
+  integrity sha1-OwmLFsaxo38NEpAY3/Z1GyDNMQM=
   dependencies:
     cachedir "2.2.0"
     cz-conventional-changelog "3.2.0"
@@ -8997,10 +8997,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^10.2.12:
-  version "10.2.12"
-  resolved "https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.2.12.tgz?cache=0&sync_timestamp=1598351176871&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.2.12.tgz#882c814f539979aa6e854199560d63bbf807542f"
-  integrity sha1-iCyBT1OZeapuhUGZVg1ju/gHVC8=
+lint-staged@^10.2.13:
+  version "10.2.13"
+  resolved "https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.2.13.tgz?cache=0&sync_timestamp=1598368715482&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.2.13.tgz#b9c504683470edfc464b7d3fe3845a5a1efcd814"
+  integrity sha1-ucUEaDRw7fxGS30/44RaWh782BQ=
   dependencies:
     chalk "^4.1.0"
     cli-truncate "^2.1.0"
