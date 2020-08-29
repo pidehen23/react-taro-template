@@ -6,7 +6,7 @@ import classnames from 'classnames'
 
 import apis from './apis'
 import styles from './style/index.less'
-import { IWrapHomeState } from '@/store/home/type'
+import { IWrapHomeState, IHomeState } from '@/store/home/type'
 import { setCommon, add, minus, asyncAdd } from '@/store/home/actions'
 
 type PageStateProps = {
@@ -61,7 +61,26 @@ class Index extends Component<IProps, IState> {
 
   componentWillUnmount() { }
 
-  componentDidShow() { }
+  componentDidShow() {
+    // const page = getCurrentInstance().page
+    // if (typeof page?.getTabBar === 'function') {
+    //   const tabBar = getCurrentInstance().page.getTabBar()
+    //   if (tabBar) {
+    //     tabBar.setData({
+    //       currentIndx: 0
+    //     })
+    //   }
+    // }
+    // const curPage = Taro.getCurrentPages()[Taro.getCurrentPages().length - 1]
+    // curPage.getTabBar().setData({
+    //   currentIndx: 0
+    // })
+    // if (typeof this.$scope.getTabBar === 'function' && this.$scope.getTabBar) {
+    //   this.$scope.getTabBar().setData({
+    //     selected: 0 //当前tab对应的索引
+    //   })
+    // }
+  }
 
   componentDidHide() { }
 
@@ -89,7 +108,7 @@ const mapStateToProps = (state: IWrapHomeState) => ({
 })
 
 const mapDispatchToProps = (dispatch: any) => ({
-  setCommon: (payload: any) => dispatch(setCommon(payload)),
+  setCommon: (payload: Partial<IHomeState>) => dispatch(setCommon(payload)),
   add: () => dispatch(add()),
   minus: () => dispatch(minus()),
   asyncAdd: () => dispatch(asyncAdd())

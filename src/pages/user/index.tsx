@@ -33,7 +33,15 @@ class Index extends Component<IProps, IState> {
 
   componentWillUnmount() { }
 
-  componentDidShow() { }
+  componentDidShow() {
+    // const curPage = Taro.getCurrentPages()[Taro.getCurrentPages().length - 1]
+    // curPage.getTabBar().setCurrentIndex(1)
+    // if (typeof this.$scope.getTabBar === 'function' && this.$scope.getTabBar) {
+    //   this.$scope.getTabBar().setData({
+    //     selected: 1 //当前tab对应的索引
+    //   })
+    // }
+  }
 
   componentDidHide() { }
 
@@ -65,7 +73,6 @@ class Index extends Component<IProps, IState> {
 const mapStateToProps = (state: IWrapHomeState) => ({
   count: state.home.count
 })
-
 const mapDispatchToProps = () => ({})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index)

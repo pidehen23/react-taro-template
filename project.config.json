@@ -15,9 +15,10 @@
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
     "checkInvalidKey": true,
-    "checkSiteMap": true,
+    "checkSiteMap": false,
     "uploadWithSourceMap": true,
     "useMultiFrameRuntime": true,
+    "useApiHook": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -27,8 +28,7 @@
     "useCompilerModule": false,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
-    "packNpmRelationList": [],
-    "useApiHook": true
+    "packNpmRelationList": []
   },
   "compileType": "miniprogram",
   "simulatorType": "wechat",
