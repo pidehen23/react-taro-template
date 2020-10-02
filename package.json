@@ -26,7 +26,7 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "gc": "git-cz",
-    "eslint": "eslint src --ext .tsx,.ts --color --fix"
+    "fix": "eslint src --ext .tsx,.ts --color --fix"
   },
   "browserslist": [
     "last 3 versions",
@@ -87,7 +87,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run eslint",
+      "pre-commit": "lint-staged && npm run fix",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
